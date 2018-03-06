@@ -1,9 +1,0 @@
-# -------------------------------------
-# パッケージ追加
-# -------------------------------------
- - name: Install Packages
-   yum: name={{ item }} state=installed
-   with_items:
-    - vim
-    - emacs
-    - git

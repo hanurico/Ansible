@@ -1,5 +1,0 @@
-# -------------------------------------
-# Ansible 導入
-# -------------------------------------
- - name: Install Ansible
-   yum: name=ansible state=installed
