@@ -5,16 +5,19 @@
 [dockerserver]
 
 [devopsserver]
-192.168.72.251
+#192.168.72.251
 192.168.72.252
 
 [mariadbserver]
 192.168.72.171
 192.168.72.172
 
-[vars:all]
+[all:vars]
+# -s をつけて sudo で実行することができる。
+# ansible-playbook -i <inventory file> -s <yaml file>
 ansible_ssh_port=22
-ansible_ssh_user=root
+ansible_ssh_user=hnadmin
 ansible_ssh_pass=fsWpat8BB56n
 ansible_sudo_pass=fsWpat8BB56n
-ssh_args = -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+#ssh_args = -o ControlMaster=auto -o ControlPersist=60s -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null
+#ansible_host_key_cheking = False
